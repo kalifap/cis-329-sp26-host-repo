@@ -1,0 +1,33 @@
+body {
+    font-family: sans-serif;
+    max-width: 600px;
+    margin: 20px auto;
+    line-height: 1.5;
+}
+
+.product, #cart-display {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.clear-btn {
+    background: #dc3545;
+}
+
+.clear-btn:hover {
+    background: #a71d2a;
+}
