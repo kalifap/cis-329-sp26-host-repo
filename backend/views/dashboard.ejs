@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor Dashboard</title>
+    <style>
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #f4f4f4; }
+    </style>
+</head>
+<body>
+    <h1>Doctor Dashboard</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Patient Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Medical History</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if (patients.length > 0) { %>
+                <% patients.forEach(patient => { %>
+                    <tr>
+                        <td><%= patient.name %></td>
+                        <td><%= patient.age %></td>
+                        <td><%= patient.gender %></td>
+                        <td><%= patient.medicalHistory %></td>
+                    </tr>
+                <% }) %>
+            <% } else { %>
+                <tr>
+                    <td colspan="4">No patients assigned yet.</td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</body>
+</html>

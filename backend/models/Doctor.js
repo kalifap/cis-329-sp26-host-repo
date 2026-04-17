@@ -1,0 +1,18 @@
+const mongoose = require('mongoose');
+const { type } = require('node:os');
+
+const doctorSchema = new mongoose.Schema({
+    name: {
+        type: String, required: true},
+    email: {
+        type: String, required: true, unique: true, lowercase: true},
+    password: {
+        type: String, required: true},
+    specialization: {
+        type: String, required: true},
+    patients: [{
+        type: mongoose.Schema.Types.ObjectId, ref: 'Patient'
+    }]
+}, { timestamps: true })
+
+module.exports = mongoose.model('Doctor', doctorSchema);
